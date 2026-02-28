@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+
+<html lang="en" class="dark">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>UPI Transfer Form</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2b7cee",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101822",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "2xl": "1rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen flex flex-col antialiased selection:bg-primary/20 selection:text-primary">
+    <div class="relative flex flex-col flex-grow w-full">
+        <!-- Top Navigation -->
+        <header
+            class="sticky top-0 z-20 flex items-center justify-between whitespace-nowrap border-b border-solid border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 px-6 py-3 lg:px-10">
+            <a href="/dashboard"
+                class="flex items-center gap-4 text-slate-900 dark:text-white hover:text-primary transition-colors">
+                <div class="size-8 text-primary flex items-center justify-center">
+                    <span class="material-symbols-outlined text-3xl">account_balance</span>
+                </div>
+                <h2 class="text-slate-900 dark:text-white text-xl font-bold leading-tight tracking-tight">Fintech Bank
+                </h2>
+            </a>
+            <div class="flex gap-3">
+                <button
+                    class="flex items-center justify-center overflow-hidden rounded-lg size-10 bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-slate-100 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors">
+                    <span class="material-symbols-outlined">notifications</span>
+                </button>
+                <button
+                    class="flex items-center justify-center overflow-hidden rounded-lg size-10 bg-primary text-white hover:bg-primary/90 transition-colors">
+                    <span class="material-symbols-outlined">person</span>
+                </button>
+            </div>
+        </header>
+        <!-- Main Content Area -->
+        <main class="flex-1 flex flex-col items-center justify-center p-4 md:p-8 lg:p-12 relative overflow-hidden">
+            <!-- Abstract background shapes -->
+            <div class="absolute -top-24 -left-24 w-96 h-96 bg-primary/5 rounded-full blur-3xl pointer-events-none">
+            </div>
+            <div class="absolute top-1/2 -right-24 w-64 h-64 bg-primary/10 rounded-full blur-3xl pointer-events-none">
+            </div>
+            <div
+                class="w-full max-w-[560px] bg-white dark:bg-slate-900 rounded-2xl shadow-xl border border-slate-100 dark:border-slate-800 overflow-hidden relative z-10">
+                <!-- Card Header -->
+                <div class="px-8 pt-8 pb-4">
+                    <div class="flex items-start justify-between">
+                        <div>
+                            <h1 class="text-2xl font-bold text-slate-900 dark:text-white tracking-tight">UPI Transfer
+                            </h1>
+                            <p class="text-slate-500 dark:text-slate-400 text-sm mt-1">Send money securely instantly.
+                            </p>
+                        </div>
+                        <div class="p-2 bg-primary/10 rounded-full text-primary">
+                            <span class="material-symbols-outlined">qr_code_scanner</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Form -->
+                <div class="px-8 pb-8 pt-2 flex flex-col gap-6">
+                    <!-- Recipient -->
+                    <label class="flex flex-col gap-2 group">
+                        <span class="text-sm font-semibold text-slate-700 dark:text-slate-300">Recipient UPI ID /
+                            Account</span>
+                        <div class="relative flex items-center">
+                            <div
+                                class="absolute left-4 text-slate-400 group-focus-within:text-primary transition-colors">
+                                <span class="material-symbols-outlined">alternate_email</span>
+                            </div>
+                            <input
+                                class="w-full pl-12 pr-4 h-14 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl text-slate-900 dark:text-white placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all font-medium"
+                                placeholder="username@upi" type="text" />
+                            <div class="absolute right-4 text-green-500 hidden group-valid:block">
+                                <span class="material-symbols-outlined">check_circle</span>
+                            </div>
+                        </div>
+                    </label>
+                    <!-- Amount & Date Row -->
+                    <div class="flex flex-col md:flex-row gap-6">
+                        <!-- Amount -->
+                        <label class="flex flex-col gap-2 flex-1 group">
+                            <span class="text-sm font-semibold text-slate-700 dark:text-slate-300">Amount (₹)</span>
+                            <div class="relative flex items-center">
+                                <div
+                                    class="absolute left-4 text-slate-400 group-focus-within:text-primary transition-colors font-bold text-lg">
+                                    ₹</div>
+                                <input
+                                    class="w-full pl-10 pr-4 h-14 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl text-slate-900 dark:text-white placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all text-lg font-bold"
+                                    placeholder="0.00" type="number" />
+                            </div>
+                        </label>
+                        <!-- Date -->
+                        <label class="flex flex-col gap-2 flex-1 group">
+                            <span class="text-sm font-semibold text-slate-700 dark:text-slate-300">Date</span>
+                            <div class="relative flex items-center">
+                                <input
+                                    class="w-full pl-4 pr-10 h-14 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl text-slate-900 dark:text-white placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all font-medium appearance-none"
+                                    type="date" value="2023-10-27" />
+                                <div
+                                    class="absolute right-4 text-slate-400 pointer-events-none group-focus-within:text-primary transition-colors">
+                                    <span class="material-symbols-outlined">calendar_today</span>
+                                </div>
+                            </div>
+                        </label>
+                    </div>
+                    <!-- Description -->
+                    <label class="flex flex-col gap-2 group">
+                        <span class="text-sm font-semibold text-slate-700 dark:text-slate-300">Description <span
+                                class="text-slate-400 font-normal">(Optional)</span></span>
+                        <div class="relative">
+                            <textarea
+                                class="w-full p-4 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl text-slate-900 dark:text-white placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all min-h-[100px] resize-none font-medium"
+                                placeholder="What's this for? (e.g., Rent, Dinner)"></textarea>
+                            <div
+                                class="absolute bottom-4 right-4 text-slate-400 pointer-events-none group-focus-within:text-primary transition-colors">
+                                <span class="material-symbols-outlined">edit_note</span>
+                            </div>
+                        </div>
+                    </label>
+                    <!-- Action -->
+                    <div class="pt-2">
+                        <button
+                            class="w-full h-14 bg-primary hover:bg-primary/90 text-white font-bold text-lg rounded-xl shadow-lg shadow-primary/30 flex items-center justify-center gap-2 transition-transform active:scale-[0.98]">
+                            <span>Transfer Now</span>
+                            <span class="material-symbols-outlined">arrow_forward</span>
+                        </button>
+                        <div
+                            class="flex items-center justify-center gap-2 mt-4 text-xs text-slate-500 dark:text-slate-400">
+                            <span class="material-symbols-outlined text-[16px]">lock</span>
+                            <span>Payments secured by 256-bit encryption</span>
+                            <div
+                                class="flex items-center justify-center gap-2 mt-4 text-xs text-slate-500 dark:text-slate-400">
+                                <span class="material-symbols-outlined text-[16px]">lock</span>
+                                <span>Payments secured by 256-bit encryption</span>
+                            </div>
+
+                            <!-- Test Info Card injected via JS safely from backend -->
+                            <div id="demo-info-card"
+                                class="mt-6 p-4 bg-blue-50 dark:bg-slate-800/80 rounded-lg border border-blue-100 dark:border-slate-700 text-sm hidden">
+                                <p class="font-bold text-slate-800 dark:text-slate-200 mb-2">Backend Demo Info</p>
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-slate-600 dark:text-slate-400"
+                                    id="demo-info-grid">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </main>
+    </div>
+</body>
+
+</html>

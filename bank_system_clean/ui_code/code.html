@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+
+<html lang="en" class="dark">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Fintech Bank Login</title>
+    <!-- Fonts and Icons -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <!-- Theme Configuration -->
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2b7cee",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101822",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+</head>
+
+<body
+    class="font-display bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen flex flex-col antialiased">
+    <!-- Main Content Area -->
+    <main class="flex-grow flex items-center justify-center p-4">
+        <!-- Central Login Card -->
+        <div
+            class="w-full max-w-[480px] bg-white dark:bg-slate-900 rounded-xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-slate-100 dark:border-slate-800 overflow-hidden relative">
+            <!-- Decorative Top Gradient Line -->
+            <div class="h-1.5 w-full bg-primary absolute top-0 left-0"></div>
+            <div class="p-8 sm:p-10">
+                <!-- Header Section -->
+                <div class="flex flex-col items-center gap-6 mb-8">
+                    <!-- Logo Area -->
+                    <div class="flex items-center gap-3">
+                        <div class="text-primary size-8">
+                            <svg class="w-full h-full" fill="none" viewbox="0 0 48 48"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path clip-rule="evenodd"
+                                    d="M24 18.4228L42 11.475V34.3663C42 34.7796 41.7457 35.1504 41.3601 35.2992L24 42V18.4228Z"
+                                    fill="currentColor" fill-rule="evenodd"></path>
+                                <path clip-rule="evenodd"
+                                    d="M24 8.18819L33.4123 11.574L24 15.2071L14.5877 11.574L24 8.18819ZM9 15.8487L21 20.4805V37.6263L9 32.9945V15.8487ZM27 37.6263V20.4805L39 15.8487V32.9945L27 37.6263ZM25.354 2.29885C24.4788 1.98402 23.5212 1.98402 22.646 2.29885L4.98454 8.65208C3.7939 9.08038 3 10.2097 3 11.475V34.3663C3 36.0196 4.01719 37.5026 5.55962 38.098L22.9197 44.7987C23.6149 45.0671 24.3851 45.0671 25.0803 44.7987L42.4404 38.098C43.9828 37.5026 45 36.0196 45 34.3663V11.475C45 10.2097 44.2061 9.08038 43.0155 8.65208L25.354 2.29885Z"
+                                    fill="currentColor" fill-rule="evenodd"></path>
+                            </svg>
+                        </div>
+                        <h1 class="text-2xl font-bold tracking-tight text-slate-900 dark:text-white">Fintech Bank</h1>
+                    </div>
+                    <!-- Welcome Text -->
+                    <div class="text-center">
+                        <h2 class="text-xl font-bold text-slate-900 dark:text-white mb-1">Welcome Back</h2>
+                        <p class="text-slate-500 dark:text-slate-400 text-sm">Securely access your finances anywhere.
+                        </p>
+                    </div>
+                </div>
+                <!-- Form Section -->
+                <form class="flex flex-col gap-5">
+                    <!-- Email Input -->
+                    <label class="flex flex-col gap-2">
+                        <span class="text-sm font-semibold text-slate-700 dark:text-slate-300">Email or Account
+                            Number</span>
+                        <div class="relative">
+                            <input
+                                class="w-full h-12 rounded-lg border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-white px-4 pl-11 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all placeholder:text-slate-400"
+                                placeholder="name@example.com" type="text" />
+                            <div class="absolute left-3 top-1/2 -translate-y-1/2 text-slate-400">
+                                <span class="material-symbols-outlined text-[20px]">mail</span>
+                            </div>
+                        </div>
+                    </label>
+                    <!-- Password Input -->
+                    <label class="flex flex-col gap-2">
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm font-semibold text-slate-700 dark:text-slate-300">Password</span>
+                            <a class="text-sm font-medium text-primary hover:text-primary/80 transition-colors"
+                                href="#">Forgot password?</a>
+                        </div>
+                        <div class="relative group">
+                            <input
+                                class="w-full h-12 rounded-lg border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-white px-4 pl-11 pr-11 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all placeholder:text-slate-400"
+                                placeholder="Enter your password" type="password" />
+                            <div class="absolute left-3 top-1/2 -translate-y-1/2 text-slate-400">
+                                <span class="material-symbols-outlined text-[20px]">lock</span>
+                            </div>
+                            <button
+                                class="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 transition-colors"
+                                type="button">
+                                <span class="material-symbols-outlined text-[20px]">visibility</span>
+                            </button>
+                        </div>
+                    </label>
+                    <!-- Login Button -->
+                    <button
+                        class="mt-2 w-full h-12 bg-primary hover:bg-blue-600 text-white font-bold rounded-lg transition-all shadow-md hover:shadow-lg active:scale-[0.99] flex items-center justify-center gap-2 group">
+                        <span
+                            class="material-symbols-outlined text-[20px] group-hover:translate-x-0.5 transition-transform">login</span>
+                        <span>Sign In</span>
+                    </button>
+                </form>
+                <!-- Divider -->
+                <div class="relative my-8">
+                    <div class="absolute inset-0 flex items-center">
+                        <div class="w-full border-t border-slate-200 dark:border-slate-700"></div>
+                    </div>
+                    <div class="relative flex justify-center text-sm">
+                        <span class="px-2 bg-white dark:bg-slate-900 text-slate-500 dark:text-slate-400">New to Fintech
+                            Bank?</span>
+                    </div>
+                </div>
+
+                <!-- Create Account Button -->
+                <button
+                    class="w-full h-12 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 hover:border-slate-300 dark:hover:border-slate-600 text-slate-700 dark:text-slate-200 font-bold rounded-lg transition-all flex items-center justify-center gap-2 hover:bg-slate-50 dark:hover:bg-slate-700">
+                    <span>Create an Account</span>
+                </button>
+            </div>
+            <!-- Bottom Secure Badge Area -->
+            <div
+                class="bg-slate-50 dark:bg-slate-800/50 p-4 border-t border-slate-100 dark:border-slate-800 flex justify-center items-center gap-2 text-xs text-slate-500 dark:text-slate-400">
+                <span class="material-symbols-outlined text-[16px] text-green-500">lock</span>
+                <span>Your connection is 256-bit encrypted</span>
+            </div>
+        </div>
+    </main>
+    <!-- Footer Links -->
+    <footer class="py-6 text-center">
+        <div class="flex justify-center gap-6 text-sm text-slate-500 dark:text-slate-400">
+            <a class="hover:text-primary transition-colors" href="#">Privacy Policy</a>
+            <a class="hover:text-primary transition-colors" href="#">Terms of Service</a>
+            <a class="hover:text-primary transition-colors" href="#">Help Center</a>
+        </div>
+        <p class="mt-4 text-xs text-slate-400 dark:text-slate-600">© 2023 Fintech Bank. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>

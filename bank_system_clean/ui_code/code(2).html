@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+
+<html lang="en" class="dark">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>FinTech Bank - Account Details</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2b7cee",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101822",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 antialiased overflow-x-hidden">
+    <div class="flex min-h-screen w-full flex-row">
+        <!-- Sidebar Navigation -->
+        <aside
+            class="hidden lg:flex w-72 flex-col justify-between border-r border-slate-200 bg-white dark:bg-slate-900 dark:border-slate-800 flex-shrink-0">
+            <div class="flex flex-col gap-4 p-4">
+                <div class="flex items-center gap-3 px-2 py-3">
+                    <div class="bg-primary/10 flex items-center justify-center rounded-xl h-10 w-10 text-primary">
+                        <span class="material-symbols-outlined text-2xl">account_balance</span>
+                    </div>
+                    <div class="flex flex-col">
+                        <h1 class="text-slate-900 dark:text-white text-base font-bold leading-tight">FinTech Bank</h1>
+                        <p class="text-slate-500 dark:text-slate-400 text-xs font-normal">Personal Banking</p>
+                    </div>
+                </div>
+                <nav class="flex-1 px-4 py-6 flex flex-col gap-1.5">
+                    <!-- Active State -->
+                    <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg bg-primary/10 text-primary group transition-colors"
+                        href="#">
+                        <span class="material-symbols-outlined filled">dashboard</span>
+                        <span class="text-sm font-semibold">Dashboard</span>
+                    </a>
+                    <!-- Inactive States -->
+                    <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-slate-50 dark:hover:bg-gray-800 text-slate-600 dark:text-slate-300 transition-colors"
+                        href="#">
+                        <span class="material-symbols-outlined">account_balance_wallet</span>
+                        <span class="text-sm font-medium">Accounts</span>
+                    </a>
+
+                    <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-slate-50 dark:hover:bg-gray-800 text-slate-600 dark:text-slate-300 transition-colors"
+                        href="#">
+                        <span class="material-symbols-outlined">sync_alt</span>
+                        <span class="text-sm font-medium">Money Transfer</span>
+                    </a>
+                    <div class="my-2 border-t border-slate-100 dark:border-gray-800"></div>
+                    <p class="px-3 text-xs font-semibold text-slate-400 uppercase tracking-wider mb-1">Services</p>
+                    <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-slate-50 dark:hover:bg-gray-800 text-slate-600 dark:text-slate-300 transition-colors"
+                        href="#">
+                        <span class="material-symbols-outlined">credit_card</span>
+                        <span class="text-sm font-medium">Cards</span>
+                    </a>
+                    <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-slate-50 dark:hover:bg-gray-800 text-slate-600 dark:text-slate-300 transition-colors"
+                        href="#">
+                        <span class="material-symbols-outlined">real_estate_agent</span>
+                        <span class="text-sm font-medium">Loan</span>
+                    </a>
+                    <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-slate-50 dark:hover:bg-gray-800 text-slate-600 dark:text-slate-300 transition-colors"
+                        href="#">
+                        <span class="material-symbols-outlined">savings</span>
+                        <span class="text-sm font-medium">Fixed Deposit (FD)</span>
+                    </a>
+                    <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-slate-50 dark:hover:bg-gray-800 text-slate-600 dark:text-slate-300 transition-colors"
+                        href="#">
+                        <span class="material-symbols-outlined">description</span>
+                        <span class="text-sm font-medium">Cheque Services</span>
+                    </a>
+                    <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-slate-50 dark:hover:bg-gray-800 text-slate-600 dark:text-slate-300 transition-colors"
+                        href="#">
+                        <span class="material-symbols-outlined">bar_chart</span>
+                        <span class="text-sm font-medium">Reports</span>
+                    </a>
+                </nav>
+            </div>
+            <div class="p-4 border-t border-slate-200 dark:border-slate-800">
+                <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors group"
+                    href="#">
+                    <span
+                        class="material-symbols-outlined text-slate-400 group-hover:text-red-500 transition-colors">logout</span>
+                    <p class="text-sm font-medium">Log Out</p>
+                </a>
+                <div class="mt-4 flex items-center gap-3 px-3">
+                    <div class="relative">
+                        <div class="bg-center bg-no-repeat bg-cover rounded-full h-10 w-10 border-2 border-white dark:border-slate-800 shadow-sm"
+                            data-alt="User avatar small"
+                            style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAkLjJx1QOkVpM_vSRJ5CNgE7ZNszIardgr3eI71qcaTB2MZ3RWIAKKNCBY_VdAc7gaHV3b0VYPUa4gcdDT8K2cCuEFl6o5G_NbwQIoloawVoNVEkiebis5qt5-kiD-523cAKWCGre68LV3Sjxl1ALXzZXpWI8HeRo0z-ZQHKeKqLirwWMb61y1uSB_GrWZ34V3YNcFPIfUSt1xSGlGu-LjzDz4oEdOJ0j3gg-qgc18_6_dY_MjatGOgmwZB6Q5t8jlstE-Cl4uZBIL");'>
+                        </div>
+                        <div
+                            class="absolute bottom-0 right-0 h-3 w-3 bg-green-500 rounded-full border-2 border-white dark:border-slate-800">
+                        </div>
+                    </div>
+                    <div class="flex flex-col">
+                        <p class="text-slate-900 dark:text-white text-sm font-medium leading-none"
+                            id="ui-user-profile-name">User</p>
+                        <p class="text-slate-500 dark:text-slate-400 text-xs mt-1">alex.johnson@example.com</p>
+                    </div>
+                </div>
+            </div>
+        </aside>
+        <!-- Main Content Area -->
+        <main class="flex-1 flex flex-col h-screen overflow-y-auto">
+            <!-- Top Header -->
+            <header
+                class="sticky top-0 z-20 flex h-16 items-center justify-between border-b border-slate-200 bg-white/80 backdrop-blur-md px-6 dark:bg-slate-900/80 dark:border-slate-800">
+                <div class="flex items-center gap-4 lg:hidden">
+                    <button class="text-slate-500 hover:text-primary transition-colors">
+                        <span class="material-symbols-outlined">menu</span>
+                    </button>
+                    <div class="text-primary font-bold text-lg">FinTech Bank</div>
+                </div>
+                <div class="hidden lg:flex items-center gap-2 text-slate-400">
+                    <span class="material-symbols-outlined text-sm">home</span>
+                    <span class="text-xs">/</span>
+                    <span class="text-slate-900 dark:text-white text-sm font-medium">Account Details</span>
+                </div>
+                <div class="flex items-center gap-4 flex-1 justify-end">
+                    <div class="relative hidden sm:flex items-center w-full max-w-xs">
+                        <span class="material-symbols-outlined absolute left-3 text-slate-400 text-[20px]">search</span>
+                        <input
+                            class="w-full h-10 pl-10 pr-4 rounded-lg bg-slate-100 dark:bg-slate-800 border-none text-sm text-slate-900 dark:text-white placeholder-slate-400 focus:ring-2 focus:ring-primary/50"
+                            placeholder="Search transactions..." type="text" />
+                    </div>
+                    <button
+                        class="relative p-2 text-slate-500 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors group">
+                        <span
+                            class="material-symbols-outlined group-hover:text-primary transition-colors">notifications</span>
+                        <span
+                            class="absolute top-2 right-2 h-2 w-2 bg-red-500 rounded-full ring-2 ring-white dark:ring-slate-900"></span>
+                    </button>
+                </div>
+            </header>
+            <!-- Page Content -->
+            <div class="flex-1 p-4 md:p-8 max-w-6xl mx-auto w-full">
+                <div class="flex flex-col gap-6">
+                    <!-- Title Section -->
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                        <div>
+                            <h1 class="text-2xl font-bold text-slate-900 dark:text-white">Account Overview</h1>
+                            <p class="text-slate-500 dark:text-slate-400 mt-1">Manage your personal banking details and
+                                preferences.</p>
+                        </div>
+                        <div class="flex gap-3">
+                            <button
+                                class="inline-flex items-center justify-center gap-2 px-4 py-2 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg text-sm font-medium text-slate-700 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors shadow-sm">
+                                <span class="material-symbols-outlined text-[20px]">download</span>
+                                Statement
+                            </button>
+                            <button
+                                class="inline-flex items-center justify-center gap-2 px-4 py-2 bg-primary hover:bg-primary/90 rounded-lg text-sm font-medium text-white shadow-md shadow-primary/20 transition-all">
+                                <span class="material-symbols-outlined text-[20px]">edit</span>
+                                Edit Details
+                            </button>
+                        </div>
+                    </div>
+                    <!-- Main Profile Card -->
+                    <div
+                        class="bg-white dark:bg-slate-900 rounded-xl shadow-sm border border-slate-200 dark:border-slate-800 overflow-hidden">
+                        <!-- Header / Banner Background -->
+                        <div class="h-32 bg-gradient-to-r from-blue-600 to-primary relative overflow-hidden">
+                            <div class="absolute inset-0 opacity-20"
+                                style="background-image: radial-gradient(#fff 1px, transparent 1px); background-size: 20px 20px;">
+                            </div>
+                            <div class="absolute -bottom-10 -right-10 w-48 h-48 bg-white/10 rounded-full blur-2xl">
+                            </div>
+                        </div>
+                        <div class="px-6 md:px-8 pb-8">
+                            <div class="flex flex-col md:flex-row gap-6 items-start md:items-end -mt-12 mb-6">
+                            </div>
+                            <div class="flex-1 pb-2">
+                                <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+                                    <div>
+                                        <div class="flex items-center gap-3">
+                                            <h2 class="text-2xl font-bold text-slate-900 dark:text-white">Alex
+                                                Johnson</h2>
+                                            <span
+                                                class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-400 border border-green-200 dark:border-green-800">
+                                                Active
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 pt-6 border-t border-slate-100 dark:border-slate-800">
+                            <div
+                                class="flex flex-col gap-1.5 p-3 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors group">
+                                <p
+                                    class="text-slate-500 dark:text-slate-400 text-xs font-semibold uppercase tracking-wider">
+                                    Account Number</p>
+                                <div class="flex items-center gap-2">
+                                    <p id="ui-card-number"
+                                        class="text-slate-900 dark:text-white text-base font-semibold">•••• •••• 8829
+                                    </p>
+                                </div>
+                            </div>
+                            <div
+                                class="flex flex-col gap-1.5 p-3 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors group">
+                                <p
+                                    class="text-slate-500 dark:text-slate-400 text-xs font-semibold uppercase tracking-wider">
+                                    IFSC Code</p>
+                                <div class="flex items-center gap-2">
+                                    <p class="text-slate-900 dark:text-white text-base font-medium">HDFC0001234</p>
+                                </div>
+                                <p class="text-xs text-slate-400">Main Branch, Market St.</p>
+                            </div>
+                            <div
+                                class="flex flex-col gap-1.5 p-3 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors">
+                                <p
+                                    class="text-slate-500 dark:text-slate-400 text-xs font-semibold uppercase tracking-wider">
+                                    Current Balance</p>
+                                <p class="text-primary text-xl font-bold font-mono tracking-tight"
+                                    id="ui-setting-balance">₹0.00</p>
+                                <div class="flex items-center gap-1 text-xs text-green-600 font-medium">
+                                    <span class="material-symbols-outlined text-[14px]">trending_up</span>
+                                    +2.5% this month
+                                </div>
+                            </div>
+                            <div
+                                class="flex flex-col gap-1.5 p-3 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors">
+                                <p
+                                    class="text-slate-500 dark:text-slate-400 text-xs font-semibold uppercase tracking-wider">
+                                    Account Type</p>
+                                <div class="flex items-center gap-2">
+                                    <span class="material-symbols-outlined text-slate-400">savings</span>
+                                    <p class="text-slate-900 dark:text-white text-base font-medium">Savings Plus</p>
+                                </div>
+                                <p class="text-xs text-slate-400">Interest: 4.5% APY</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Bottom Section: Quick Actions & Personal Info -->
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                    <!-- Personal Information Block -->
+                    <div
+                        class="lg:col-span-2 bg-white dark:bg-slate-900 rounded-xl shadow-sm border border-slate-200 dark:border-slate-800 p-6">
+                        <div class="flex items-center justify-between mb-6">
+                            <h3 class="text-lg font-bold text-slate-900 dark:text-white">Personal Information</h3>
+                            <button class="text-sm text-primary font-medium hover:underline">Update</button>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-y-6 gap-x-8">
+                            <div>
+                                <label
+                                    class="block text-xs font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wider mb-2">Full
+                                    Legal Name</label>
+                                <span id="ui-setting-name"
+                                    class="text-slate-700 dark:text-slate-200 font-medium">User</span>
+                            </div>
+                        </div>
+                        <div>
+                            <label
+                                class="block text-xs font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wider mb-2">Email
+                                Address</label>
+                            <span id="ui-setting-email"
+                                class="text-slate-700 dark:text-slate-200 font-medium">alex.johnson@example.com</span>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label
+                            class="block text-xs font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wider mb-2">Date
+                            of Birth</label>
+                        <div
+                            class="flex items-center gap-3 p-3 bg-slate-50 dark:bg-slate-800/50 rounded-lg border border-slate-100 dark:border-slate-800">
+                            <span class="material-symbols-outlined text-slate-400">calendar_month</span>
+                            <span id="ui-setting-dob" class="text-slate-700 dark:text-slate-200 font-medium">Sept 14,
+                                1988</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Security & Settings Block -->
+            <div class="lg:col-span-1 flex flex-col gap-6">
+                <!-- Security Card -->
+                <div
+                    class="bg-white dark:bg-slate-900 rounded-xl shadow-sm border border-slate-200 dark:border-slate-800 p-6">
+                    <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-4">Security</h3>
+                    <div class="flex flex-col gap-3">
+                        <div
+                            class="flex items-center justify-between p-3 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors cursor-pointer group">
+                            <div class="flex items-center gap-3">
+                                <div class="bg-blue-50 dark:bg-blue-900/20 p-2 rounded-lg text-primary">
+                                    <span class="material-symbols-outlined text-[20px]">lock_reset</span>
+                                </div>
+                                <div>
+                                    <p class="text-sm font-semibold text-slate-900 dark:text-white">Change
+                                        Password</p>
+
+                                </div>
+                            </div>
+                            <span
+                                class="material-symbols-outlined text-slate-400 text-[18px] group-hover:text-primary">chevron_right</span>
+                        </div>
+                        <div
+                            class="flex items-center justify-between p-3 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors cursor-pointer group">
+                            <div class="flex items-center gap-3">
+                                <div class="bg-blue-50 dark:bg-blue-900/20 p-2 rounded-lg text-primary">
+                                    <span class="material-symbols-outlined text-[20px]">smartphone</span>
+                                </div>
+                                <div>
+                                    <p class="text-sm font-semibold text-slate-900 dark:text-white">2-Factor
+                                        Auth</p>
+                                    <p class="text-xs text-green-600 font-medium">Enabled</p>
+                                </div>
+                            </div>
+                            <span
+                                class="material-symbols-outlined text-slate-400 text-[18px] group-hover:text-primary">chevron_right</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+    </div>
+    </div>
+    </div>
+    </main>
+    </div>
+</body>
+
+</html>

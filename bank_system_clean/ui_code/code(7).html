@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+
+<html lang="en" class="dark">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Cards Management - Fintech Bank</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2b7cee",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101822",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"],
+                        "sans": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        /* Custom scrollbar for better look in containers */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8;
+        }
+
+        .dark ::-webkit-scrollbar-thumb {
+            background: #334155;
+        }
+    </style>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 antialiased overflow-hidden">
+    <div class="flex h-screen w-full overflow-hidden">
+        <!-- Sidebar -->
+        <div
+            class="hidden md:flex flex-col w-72 border-r border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 h-full flex-shrink-0">
+            <div class="flex h-full flex-col justify-between p-4 overflow-y-auto">
+                <div class="flex flex-col gap-4">
+                    <div class="flex gap-3 items-center px-2 py-2">
+                        <div
+                            class="bg-center bg-no-repeat bg-cover rounded-full h-10 w-10 shrink-0 bg-slate-200 dark:bg-slate-700 relative overflow-hidden">
+                            <img alt="Bank Logo Icon" class="w-full h-full object-cover"
+                                data-alt="Abstract blue financial logo"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuB6hquSM-UiFs2hq75Ab5tS2vc7g7BXoSAY_c2Xm4fO6R3OknXuFsjV4Qxckl0zGdsu50kdX7snO7jqa-r0pAxPP2h4roAh3uUaWT-lgv_Skk4ljcY0C_z7UVX1OHXsbzcYPICahdce0gnSk_GzBrlpMIsAK0TBq6kgWClLi_InIh5hEIGr_hyZWZZ5QcW26jY-lmMnuIoogY_GbX2grHZpMekAWTbVK1ad9ZHHiohMTw975u2E6Ds8MtOqwVuWQLYLNtYp64oDUEZN" />
+                        </div>
+                        <div class="flex flex-col">
+                            <h1 class="text-slate-900 dark:text-white text-base font-bold leading-normal">FinTech Bank
+                            </h1>
+                            <p class="text-slate-500 dark:text-slate-400 text-sm font-normal leading-normal">Business
+                                Account</p>
+                        </div>
+                    </div>
+                    <nav class="flex-1 px-4 py-6 flex flex-col gap-1.5">
+                        <!-- Active State -->
+                        <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg bg-primary/10 text-primary group transition-colors"
+                            href="#">
+                            <span class="material-symbols-outlined filled">dashboard</span>
+                            <span class="text-sm font-semibold">Dashboard</span>
+                        </a>
+                        <!-- Inactive States -->
+                        <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-slate-50 dark:hover:bg-gray-800 text-slate-600 dark:text-slate-300 transition-colors"
+                            href="#">
+                            <span class="material-symbols-outlined">account_balance_wallet</span>
+                            <span class="text-sm font-medium">Accounts</span>
+                        </a>
+
+                        <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-slate-50 dark:hover:bg-gray-800 text-slate-600 dark:text-slate-300 transition-colors"
+                            href="#">
+                            <span class="material-symbols-outlined">sync_alt</span>
+                            <span class="text-sm font-medium">Money Transfer</span>
+                        </a>
+                        <div class="my-2 border-t border-slate-100 dark:border-gray-800"></div>
+                        <p class="px-3 text-xs font-semibold text-slate-400 uppercase tracking-wider mb-1">Services</p>
+                        <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-slate-50 dark:hover:bg-gray-800 text-slate-600 dark:text-slate-300 transition-colors"
+                            href="#">
+                            <span class="material-symbols-outlined">credit_card</span>
+                            <span class="text-sm font-medium">Cards</span>
+                        </a>
+                        <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-slate-50 dark:hover:bg-gray-800 text-slate-600 dark:text-slate-300 transition-colors"
+                            href="#">
+                            <span class="material-symbols-outlined">real_estate_agent</span>
+                            <span class="text-sm font-medium">Loan</span>
+                        </a>
+                        <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-slate-50 dark:hover:bg-gray-800 text-slate-600 dark:text-slate-300 transition-colors"
+                            href="#">
+                            <span class="material-symbols-outlined">savings</span>
+                            <span class="text-sm font-medium">Fixed Deposit (FD)</span>
+                        </a>
+                        <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-slate-50 dark:hover:bg-gray-800 text-slate-600 dark:text-slate-300 transition-colors"
+                            href="#">
+                            <span class="material-symbols-outlined">description</span>
+                            <span class="text-sm font-medium">Cheque Services</span>
+                        </a>
+                        <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-slate-50 dark:hover:bg-gray-800 text-slate-600 dark:text-slate-300 transition-colors"
+                            href="#">
+                            <span class="material-symbols-outlined">bar_chart</span>
+                            <span class="text-sm font-medium">Reports</span>
+                        </a>
+                    </nav>
+                </div>
+                <div class="mt-auto px-3 py-4">
+                    <div
+                        class="p-4 bg-slate-50 dark:bg-slate-800 rounded-xl border border-slate-100 dark:border-slate-700">
+                        <div class="flex items-center gap-2 mb-2">
+                            <span class="material-symbols-outlined text-primary text-xl">support_agent</span>
+                            <span class="text-sm font-semibold text-slate-800 dark:text-slate-200">Need Help?</span>
+                        </div>
+                        <p class="text-xs text-slate-500 dark:text-slate-400 mb-3">Contact our support team for any
+                            queries regarding your reports.</p>
+                        <button
+                            class="w-full py-2 px-3 bg-white dark:bg-slate-700 border border-slate-200 dark:border-slate-600 rounded-lg text-xs font-medium text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-600 transition-colors">Contact
+                            Support</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Main Content -->
+        <div class="flex flex-1 flex-col h-full overflow-hidden relative">
+            <!-- Header -->
+            <header
+                class="flex items-center justify-between px-6 py-4 bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 shrink-0 z-10">
+                <div class="flex items-center gap-4 lg:hidden">
+                    <button class="text-slate-500 hover:text-primary">
+                        <span class="material-symbols-outlined">menu</span>
+                    </button>
+                </div>
+                <div class="hidden lg:flex flex-col">
+                    <div class="flex items-center gap-2 text-sm text-slate-500 dark:text-slate-400">
+                        <a class="hover:text-primary transition-colors" href="#">Home</a>
+                        <span class="material-symbols-outlined text-[16px]">chevron_right</span>
+                        <span class="text-slate-800 dark:text-slate-200 font-medium">Cards Management</span>
+                    </div>
+                </div>
+                <div class="flex items-center gap-4 ml-auto">
+                    <div class="hidden sm:flex items-center bg-slate-100 dark:bg-slate-800 rounded-lg px-3 py-2 w-64">
+                        <span class="material-symbols-outlined text-slate-400 text-[20px]">search</span>
+                        <input
+                            class="bg-transparent border-none text-sm text-slate-700 dark:text-slate-200 focus:ring-0 w-full ml-2 placeholder-slate-400"
+                            placeholder="Search reports..." type="text" />
+                    </div>
+                    <button
+                        class="relative p-2 text-slate-500 hover:text-slate-800 dark:text-slate-400 dark:hover:text-slate-200 transition-colors rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800">
+                        <span class="material-symbols-outlined">notifications</span>
+                        <span
+                            class="absolute top-2 right-2 h-2 w-2 bg-red-500 rounded-full border-2 border-white dark:border-slate-900"></span>
+                    </button>
+                    <button
+                        class="flex items-center gap-2 pl-2 pr-1 py-1 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors border border-transparent hover:border-slate-200 dark:hover:border-slate-700">
+                        <div class="h-8 w-8 rounded-full overflow-hidden border border-slate-200 dark:border-slate-700">
+                            <img alt="User Profile" class="h-full w-full object-cover"
+                                data-alt="Portrait of a smiling professional man"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCDoeDDOPldVa_odmYwPF_NjOlBEzFUt68monN1e5XV5Zzy6v-x9BoRj_lo9WKMZI5_SX-4zCFh7hxh1vpipnr7CdD90EViZoQGlFKkgBEPOQj9EboIarVMskbXDcKNgBCCrxv4Vgtl20bVvuiifeSxh-K1pGfWcHPQw8eLmb3NgbfkkMa7gtLGTaazpRhgY7H3cqEm4461vSRw4NvcQ_iFDOPEK8rOk9zbRha7NPMErhYrsmFD4_mzk5dfA4VkbUbwkhnHiZZ3v7Uy" />
+                        </div>
+                        <span class="material-symbols-outlined text-slate-400">expand_more</span>
+                    </button>
+                </div>
+            </header>
+            <!-- Scrollable Content Area -->
+            <main class="flex-1 overflow-y-auto bg-background-light dark:bg-background-dark p-6">
+                <div class="max-w-7xl mx-auto space-y-6">
+                    <!-- Page Title & Actions -->
+                    <div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+                        <div>
+                            <h1 class="text-3xl font-bold text-slate-900 dark:text-white tracking-tight">Cards
+                                Management</h1>
+                            <p class="text-slate-500 dark:text-slate-400 mt-1">Manage your active debit cards securely.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Cards Content Area -->
+                    <div class="grid grid-cols-1 max-w-xl gap-8 mt-8">
+
+                        <!-- Active Debit Card Container -->
+                        <div id="active-card-container"
+                            class="bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm p-6 relative overflow-hidden flex flex-col h-full">
+                            <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-4">Your Debit Card</h3>
+                            <div
+                                class="w-full h-52 bg-gradient-to-r from-blue-600 to-primary rounded-2xl shadow-lg flex flex-col justify-between p-6 relative overflow-hidden mb-6">
+                                <div class="flex justify-between items-start relative z-10">
+                                    <span id="ui-card-type"
+                                        class="text-blue-100 font-semibold tracking-widest text-sm">DEBIT</span>
+                                    <span class="material-symbols-outlined text-white text-3xl">contactless</span>
+                                </div>
+                                <div class="flex flex-col items-start relative z-10">
+                                    <div id="ui-card-number" class="text-white text-xl tracking-[0.2em] font-mono mb-2">
+                                        •••• •••• •••• ••••</div>
+                                    <div class="flex justify-between w-full">
+                                        <span id="ui-card-name"
+                                            class="text-blue-100 text-xs tracking-wider uppercase cc-name">User</span>
+                                        <span id="ui-card-expiry" class="text-blue-100 text-xs">Valid Thru --/--</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex flex-col divide-y divide-slate-100 dark:divide-slate-800 flex-1">
+                                <div class="flex items-center justify-between py-3">
+                                    <span class="text-sm font-medium text-slate-600 dark:text-slate-400">Card
+                                        Status</span>
+                                    <span
+                                        class="px-2.5 py-1 rounded bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400 text-xs font-semibold">Active</span>
+                                </div>
+                                <div class="flex items-center justify-between py-3">
+                                    <span class="text-sm font-medium text-slate-600 dark:text-slate-400">Daily
+                                        Limit</span>
+                                    <span class="text-sm font-bold text-slate-900 dark:text-white">₹ 1,00,000</span>
+                                </div>
+                                <div class="flex items-center justify-between py-3">
+                                    <span class="text-sm font-medium text-slate-600 dark:text-slate-400">International
+                                        Usage</span>
+                                    <button
+                                        class="relative inline-flex h-5 w-9 shrink-0 cursor-pointer items-center justify-center rounded-full focus:outline-none">
+                                        <span class="sr-only">Toggle international usage</span>
+                                        <span
+                                            class="pointer-events-none absolute mx-auto h-4 w-8 rounded-full bg-primary/20 transition-colors duration-200 ease-in-out"></span>
+                                        <span
+                                            class="pointer-events-none absolute left-0 inline-block h-5 w-5 translate-x-4 transform rounded-full border border-gray-200 bg-primary shadow transition-transform duration-200 ease-in-out"></span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="mt-4 flex gap-3">
+                                <button
+                                    class="flex-1 py-2 text-sm font-medium text-primary hover:bg-primary/5 rounded-lg transition-colors border border-primary/20">Manage
+                                    Limits</button>
+                                <button
+                                    class="flex-1 py-2 text-sm font-medium text-red-600 hover:bg-red-50 dark:hover:bg-red-900/10 rounded-lg transition-colors border border-red-200 dark:border-red-900/30">Block
+                                    Card</button>
+                            </div>
+                        </div>
+
+                        <!-- No Active Card Container -->
+                        <div id="no-active-card-container"
+                            class="hidden bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm p-8 text-center">
+                            <div
+                                class="w-16 h-16 bg-slate-100 dark:bg-slate-800 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <span class="material-symbols-outlined text-slate-400 text-3xl">credit_card_off</span>
+                            </div>
+                            <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">No Active Debit Card</h3>
+                            <p class="text-slate-500 text-sm mb-6">You currently do not have an active debit card
+                                associated with this account. You can request a new one instantly.</p>
+                            <button id="btn-issue-card"
+                                class="px-6 py-2.5 bg-primary hover:bg-blue-600 text-white font-medium rounded-lg transition-colors">
+                                Issue New Debit Card
+                            </button>
+                        </div>
+
+                        <!-- Blocked Cards Container -->
+                        <div id="blocked-cards-container" class="hidden mt-8">
+                            <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-4 flex items-center gap-2">
+                                <span class="material-symbols-outlined text-red-500">gpp_bad</span>
+                                Blocked Cards
+                            </h3>
+                            <div id="blocked-cards-list" class="flex flex-col gap-3">
+                                <!-- Blocked cards injected here by JS -->
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- Footer Spacer -->
+                <div class="h-10"></div>
+            </main>
+        </div>
+    </div>
+</body>
+
+</html>
