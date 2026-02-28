@@ -51,9 +51,9 @@ Follow these step-by-step instructions to get the application running:
 
 2. **Open the project folder in your terminal**
    - Open Command Prompt (Windows), PowerShell, or your IDE's terminal (like VS Code).
-   - Navigate to the folder you extracted:
+   - Navigate to the extracted folder containing the project files (`bank_system_clean`):
      ```bash
-     cd "path\to\bank_system"
+     cd "path\to\bank_system_clean"
      ```
 
 3. **Set up a Virtual Environment (Recommended but optional)**
